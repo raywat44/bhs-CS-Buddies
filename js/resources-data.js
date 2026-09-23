@@ -9,13 +9,13 @@ const RESOURCES = [
     id: "001",
     name: "Mr. Watson",
     description: "Quick sort — but instead of numbers, we're sorting people. This video makes a topic that sounds boring into something you'll actually remember.",
-    resource_type: "video",
-    url: "https://www.youtube.com/watch?v=BD8QLnsp5mo",
+    resource_type: "image",
+    url: "https://file.forms.app/sitefile/38.jpeg",
     nick_name: "Big Watt",
     tags: ["Algorithms", "Sorting", "Visual"],
     format: "mini-lecture",
     grade_level: "Teacher",
-    date_added: "02-17"
+    birth_date: "02-17"
   },
   {
     id: "002",
@@ -27,33 +27,33 @@ const RESOURCES = [
     tags: ["Algorithms", "Sorting", "Visual"],
     format: "mini-lecture",
     grade_level: "Teacher",
-    date_added: "08-23"
+    birth_date: "08-23"
   }
 ];
 
 // Tag color mapping for visual variety
 const TAG_COLORS = {
-  "Scratch":       "#FF6B6B",
-  "Python":        "#4ECDC4",
-  "Internet":      "#45B7D1",
-  "AI":            "#96CEB4",
-  "Cybersecurity": "#FFEAA7",
-  "Loops":         "#DDA0DD",
-  "Algorithms":    "#98D8C8",
-  "Careers":       "#F7DC6F",
-  "Confidence":    "#FF8C94",
-  "StudyTips":     "#A8D8EA",
-  "Games":         "#FF6B6B",
-  "Beginner":      "#B8E0D2",
-  "Networking":    "#45B7D1",
-  "Inspiration":   "#FFD3B6",
-  "Machine Learning": "#96CEB4",
-  "Activity":      "#FFAAA5",
-  "Internet Safety": "#FFD3B6",
-  "Visual":        "#D4A5A5",
-  "Art":           "#FF8C94",
-  "Sorting":       "#98D8C8",
-  "How It Works":  "#A8D8EA"
+  "Scratcher":      "#FF6B6B",
+  "Python Wizard":  "#4ECDC4",
+  "Java Junkie":    "#45B7D1",
+  "C++ 4 U++":      "#96CEB4",
+  "C# is Flat":     "#FFEAA7",
+  "Stressed":       "#DDA0DD",
+  "": "#98D8C8",
+  "": "#F7DC6F",
+  "":    "#FF8C94",
+  "":     "#A8D8EA",
+  "":         "#FF6B6B",
+  "":      "#B8E0D2",
+  "":    "#45B7D1",
+  "":   "#FFD3B6",
+  "": "#96CEB4",
+  "":  "#FFAAA5",
+  "": "#FFD3B6",
+  "": "#D4A5A5",
+  "":  "#FF8C94",
+  "":  "#98D8C8",
+  "":  "#A8D8EA"
 };
 
 function getTagColor(tag) {
