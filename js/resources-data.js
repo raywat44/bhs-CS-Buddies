@@ -7,15 +7,15 @@
 const RESOURCES = [
   {
     id: "001",
-    title: "Sorting Algorithms Explained with Dance Moves",
+    name: "Mr. Watson",
     description: "Quick sort — but instead of numbers, we're sorting people. This video makes a topic that sounds boring into something you'll actually remember.",
     resource_type: "video",
     url: "https://www.youtube.com/watch?v=BD8QLnsp5mo",
-    contributor_name: "Taki se kanal",
+    nick_name: "Big Watt",
     tags: ["Algorithms", "Sorting", "Visual"],
     format: "mini-lecture",
     grade_level: "6-8",
-    date_added: "2025-02-15"
+    date_added: "02-17"
   }
 ];
 

@@ -110,7 +110,7 @@ document.addEventListener("DOMContentLoaded", () => {
     filteredResources = RESOURCES.filter(r => {
       // Search
       if (searchQuery) {
-        const haystack = [r.title, r.description, r.contributor_name, ...r.tags].join(" ").toLowerCase();
+        const haystack = [r.name, r.description, r.nick_name, ...r.tags].join(" ").toLowerCase();
         if (!haystack.includes(searchQuery)) return false;
       }
       // Tags
@@ -171,17 +171,17 @@ document.addEventListener("DOMContentLoaded", () => {
         <span class="card-format-badge format-${r.format}">${formatIcon} ${FORMAT_LABELS[r.format]}</span>
         <span class="card-type-icon">${typeIcon}</span>
       </div>
-      <h3 class="card-title">${r.title}</h3>
+      <h3 class="card-title">${r.name}</h3>
       <p class="card-description">${r.description}</p>
       <div class="card-tags">${tagsHTML}</div>
       <div class="card-footer">
         <div class="contributor">
-          <span class="contributor-avatar">${getInitials(r.contributor_name)}</span>
-          <span class="contributor-name">${r.contributor_name}</span>
+          <span class="contributor-avatar">${getInitials(r.nick_name)}</span>
+          <span class="contributor-name">${r.nick_name}</span>
         </div>
         <span class="grade-badge">${r.grade_level}</span>
       </div>
-      <a href="resource.html?id=${r.id}" class="card-link" aria-label="View ${r.title}">
+      <a href="resource.html?id=${r.id}" class="card-link" aria-label="View ${r.name}">
         <span>View Resource →</span>
       </a>
     `;
