@@ -50,13 +50,13 @@
       </div>`;
     document.title = "Not Found — Byte Buddies";
   } else {
-    document.title = `${resource.title} — Byte Buddies`;
+    document.title = `${resource.name} — Byte Buddies`;
 
     const typeLabel = { video: "Video", pdf: "PDF", doc: "Document", link: "Link" }[resource.resource_type] || resource.resource_type;
     const typeIcon  = TYPE_ICONS[resource.resource_type] || "🔗";
     const fmtIcon   = FORMAT_ICONS[resource.format] || "📚";
     const fmtLabel  = FORMAT_LABELS[resource.format] || resource.format;
-    const initials  = resource.contributor_name.split(" ").map(n=>n[0]).join("").substring(0,2).toUpperCase();
+    const initials  = resource.nick_name.split(" ").map(n=>n[0]).join("").substring(0,2).toUpperCase();
 
     const tagsHTML = resource.tags.map(tag =>
       `<span class="tag" style="background:${getTagColor(tag)}">${tag}</span>`
@@ -76,7 +76,7 @@
         actionHTML = `
           <div style="border:3px solid var(--ink); border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow); margin-bottom:1.5rem;">
             <iframe width="100%" height="400" src="https://www.youtube.com/embed/${videoId}"
-              title="${resource.title}" frameborder="0"
+              title="${resource.name}" frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen style="display:block;"></iframe>
           </div>
@@ -102,11 +102,11 @@
             <span class="card-format-badge" style="background:#f0f0f0;">${typeIcon} ${typeLabel}</span>
             <span class="grade-badge">${resource.grade_level}</span>
           </div>
-          <h1 class="detail-title">${resource.title}</h1>
+          <h1 class="detail-title">${resource.name}</h1>
           <div class="detail-meta">
             <div class="detail-meta-item">
               <span>📅</span>
-              <span>${new Date(resource.date_added).toLocaleDateString("en-US", {year:"numeric",month:"long",day:"numeric"})}</span>
+              <span>${new Date(resource.date_added).toLocaleDateString("en-US", {month:"long",day:"numeric"})}</span>
             </div>
           </div>
         </div>
@@ -119,7 +119,7 @@
           <div class="detail-contributor">
             <div class="contributor-avatar-lg">${initials}</div>
             <div>
-              <div style="font-weight:800; font-size:0.95rem;">${resource.contributor_name}</div>
+              <div style="font-weight:800; font-size:0.95rem;">${resource.nick_name}</div>
               <div style="font-size:0.82rem; color:var(--ink-light); font-weight:600;">High School Contributor</div>
             </div>
           </div>
@@ -154,13 +154,13 @@
           <span class="card-format-badge format-${r.format}">${FORMAT_ICONS[r.format]} ${FORMAT_LABELS[r.format]}</span>
           <span class="card-type-icon">${TYPE_ICONS[r.resource_type]}</span>
         </div>
-        <h3 class="card-title">${r.title}</h3>
+        <h3 class="card-title">${r.name}</h3>
         <p class="card-description">${r.description}</p>
         <div class="card-tags">${r.tags.slice(0,3).map(t=>`<span class="tag" style="background:${getTagColor(t)}">${t}</span>`).join("")}</div>
         <div class="card-footer">
           <div class="contributor">
-            <span class="contributor-avatar">${r.contributor_name.split(" ").map(n=>n[0]).join("").substring(0,2)}</span>
-            <span class="contributor-name">${r.contributor_name}</span>
+            <span class="contributor-avatar">${r.nick_name.split(" ").map(n=>n[0]).join("").substring(0,2)}</span>
+            <span class="contributor-name">${r.nick_name}</span>
           </div>
           <span class="grade-badge">${r.grade_level}</span>
         </div>
