@@ -8,18 +8,6 @@
 
 Byte Buddies is a website where high school students share videos, guides, and activities to help younger kids (grades K–8) learn about computer science. It's free, it's open source, and it's built by students for students.
 
----
-
-## How do I add a resource? (Easy way)
-
-If you have a resource to share, the easiest way is to fill out the Google Form on our website:
-
-**👉 [Go to the Submit page](https://docs.google.com/forms/d/e/1FAIpQLSfWZG7LccODJnR3sG7vqY-7Mn1Xsf6w8DS_wyuzbpCDG5yNJQ/viewform)**
-
-Fill in your name, a description of your resource, upload your file or paste a link, and we'll handle the rest. We'll review it and add it to the site (usually within a week).
-
----
-
 ## How do I add a resource? (GitHub way)
 
 If you're comfortable with code, you can add your resource directly to the project. Here's how — don't worry, it's easier than it sounds!
@@ -76,15 +64,6 @@ Here's what each field means:
 
 > ⚠️ **Don't forget the comma** at the end of the `}` — it separates your resource from the next one in the list!
 
-### Step 4: (Optional) Upload a file
-
-If your resource is a PDF or document (not a link), upload it to the `resources/` folder in your forked repo.
-
-Use the same filename in your resource's `url` field:
-```js
-url: "resources/my-cool-guide.pdf",
-```
-
 ### Step 5: Open a Pull Request
 
 Once you're happy with your changes:
@@ -95,22 +74,6 @@ Once you're happy with your changes:
 4. Click **Create Pull Request**
 
 We'll review it and merge it in! When it's live, your resource will show up on the site with your name on it. 🎉
-
----
-
-## What makes a good resource?
-
-✅ **Do:**
-- Write like you're talking to a 10-year-old (friendly, not condescending)
-- Keep it focused — one topic is better than five
-- Make sure links work before you submit
-- Give it a description that makes someone want to click it
-
-❌ **Please don't:**
-- Copy content that belongs to someone else
-- Submit anything with broken links
-- Include personal info about yourself (last name, school, etc.) unless you want to
-- Upload files bigger than 10MB (link to them instead)
 
 ---
 
