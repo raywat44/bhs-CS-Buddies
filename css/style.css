@@ -373,9 +373,10 @@ body {
   box-shadow: 3px 3px 0 var(--accent2);
 }
 
-.format-btn.active[data-format="mini-lecture"] { background: var(--accent4); }
-.format-btn.active[data-format="activity"]     { background: var(--accent3); }
-.format-btn.active[data-format="inspiration"]  { background: var(--accent1); }
+.sibling-btn.active[data-sibling="only-child"] { background: var(--accent4); }
+.sibling-btn.active[data-sibling="youngest"]   { background: var(--accent3); }
+.sibling-btn.active[data-sibling="middle"]     { background: var(--accent1); }
+.sibling-btn.active[data-sibling="oldest"]     { background: var(--accent5); }
 .type-btn.active   { background: var(--accent5); }
 .grade-btn.active  { background: var(--accent2); color: var(--ink); }
 
@@ -479,7 +480,8 @@ body {
   align-items: center;
 }
 
-.card-format-badge {
+.card-sibling-badge,
+.card-type-badge {
   font-size: 0.75rem;
   font-weight: 800;
   padding: 4px 10px;
@@ -489,9 +491,10 @@ body {
   letter-spacing: 0.5px;
 }
 
-.format-mini-lecture { background: #E8D5FF; }
-.format-activity     { background: #CCFFF8; }
-.format-inspiration  { background: #FFDFDF; }
+.sibling-only-child { background: #E8D5FF; }
+.sibling-youngest   { background: #CCFFF8; }
+.sibling-middle     { background: #FFDFDF; }
+.sibling-oldest     { background: #FFF0B3; }
 
 .card-type-icon { font-size: 1.4rem; }
 

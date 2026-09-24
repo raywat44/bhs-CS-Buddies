@@ -54,8 +54,8 @@
 
     const typeLabel = { video: "Video", pdf: "PDF", doc: "Document", link: "Link" }[resource.resource_type] || resource.resource_type;
     const typeIcon  = TYPE_ICONS[resource.resource_type] || "🔗";
-    const fmtIcon   = FORMAT_ICONS[resource.format] || "📚";
-    const fmtLabel  = FORMAT_LABELS[resource.format] || resource.format;
+    const siblingIcon  = SIBLING_ICONS[resource.sibling] || "📚";
+    const siblingLabel = SIBLING_LABELS[resource.sibling] || resource.sibling;
     const initials  = resource.nick_name.split(" ").map(n=>n[0]).join("").substring(0,2).toUpperCase();
 
     const tagsHTML = resource.tags.map(tag =>
@@ -98,21 +98,21 @@
       <div class="detail-card">
         <div class="detail-header">
           <div class="detail-badges">
-            <span class="card-format-badge format-${resource.format}">${fmtIcon} ${fmtLabel}</span>
-            <span class="card-format-badge" style="background:#f0f0f0;">${typeIcon} ${typeLabel}</span>
+            <span class="card-sibling-badge sibling-${resource.sibling}">${siblingIcon} ${siblingLabel}</span>
+            <span class="card-type-badge" style="background:#f0f0f0;">${typeIcon} ${typeLabel}</span>
             <span class="grade-badge">${resource.grade_level}</span>
           </div>
           <h1 class="detail-title">${resource.name}</h1>
           <div class="detail-meta">
             <div class="detail-meta-item">
               <span>📅</span>
-              <span>${new Date(resource.date_added).toLocaleDateString("en-US", {month:"long",day:"numeric"})}</span>
+              <span>${new Date(resource.birth_date).toLocaleDateString("en-US", {month:"long",day:"numeric"})}</span>
             </div>
           </div>
         </div>
 
         <div class="detail-body">
-          <p class="detail-description">${resource.description}</p>
+          <p class="detail-description">${resource.fun_facts}</p>
 
           <div class="detail-tags">${tagsHTML}</div>
 
@@ -120,7 +120,18 @@
             <div class="contributor-avatar-lg">${initials}</div>
             <div>
               <div style="font-weight:800; font-size:0.95rem;">${resource.nick_name}</div>
-              <div style="font-size:0.82rem; color:var(--ink-light); font-weight:600;">High School Contributor</div>
+              <div style="font-size:0.82rem; color:var(--ink-light); font-weight:600;" id = "major-college">Future ${resource.major} Major @ ${resource.college}</div>
+              <!--
+                <script>
+                
+                const div = document.getElementById("major-college");
+                if (${resource.grade_level} === "Teacher") {
+                  div.innerHTML = "${resource.major} Major @ ${resource.college}";
+                } else {
+                  div.innerHTML = "Future ${resource.major} Major @ ${resource.college}";
+                }
+                </script>
+              -->
             </div>
           </div>
 
@@ -128,7 +139,7 @@
         </div>
       </div>
 
-      <!-- More from same format -->
+      <!-- More from same sibling -->
       <div style="margin-top:3rem;">
         <h2 class="section-title">📚 More resources like this</h2>
         <div id="similar-grid" style="display:grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap:1.25rem; margin-top:1rem;"></div>
@@ -138,7 +149,7 @@
     // Build similar resources
     const similar = RESOURCES.filter(r =>
       r.id !== resource.id && (
-        r.format === resource.format ||
+        r.sibling === resource.sibling ||
         r.tags.some(t => resource.tags.includes(t))
       )
     ).slice(0, 3);
@@ -151,11 +162,11 @@
       card.style.textDecoration = "none";
       card.innerHTML = `
         <div class="card-header">
-          <span class="card-format-badge format-${r.format}">${FORMAT_ICONS[r.format]} ${FORMAT_LABELS[r.format]}</span>
+          <span class="card-sibling-badge sibling-${r.sibling}">${SIBLING_ICONS[r.sibling]} ${SIBLING_LABELS[r.sibling]}</span>
           <span class="card-type-icon">${TYPE_ICONS[r.resource_type]}</span>
         </div>
         <h3 class="card-title">${r.name}</h3>
-        <p class="card-description">${r.description}</p>
+        <p class="card-description">${r.fun_facts}</p>
         <div class="card-tags">${r.tags.slice(0,3).map(t=>`<span class="tag" style="background:${getTagColor(t)}">${t}</span>`).join("")}</div>
         <div class="card-footer">
           <div class="contributor">

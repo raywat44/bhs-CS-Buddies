@@ -40,7 +40,7 @@ Here's what each field means:
 | `major` | Your potential college | `"Computer Science"` |
 | `college` | Your potential major | `"Georgia Tech"` |
 | `tags` | A list of topics your resource covers | `["Python", "Loops"]` |
-| `format` | One of: `"mini-lecture"`, `"activity"`, `"inspiration"` | `"activity"` |
+| `sibling` | One of: `"only-child"`, `"youngest"`, `"middle"`, `"oldest"` | `"youngest"` |
 | `grade_level` | Either `"K-5"` or `"6-8"` | `"6-8"` |
 | `birth_date` | Today's date in YYYY-MM-DD format | `"2025-03-01"` |
 
@@ -57,7 +57,7 @@ Here's what each field means:
   major: "Computer Science",
   college: "Georgia Tech",
   tags: ["Binary", "How It Works", "Beginner"],
-  format: "mini-lecture",
+  sibling: "youngest",
   grade_level: "K-5",
   date_added: "2025-03-01"
 },
