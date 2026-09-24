@@ -61,8 +61,8 @@ function getTagColor(tag) {
 }
 
 const FORMAT_ICONS = {
-  "mini-lecture": "🎓",
-  "activity": "🛠️",
+  "mini-lecture": "🐵",
+  "activity": "🐤",
   "inspiration": "✨"
 };
 
