@@ -4,7 +4,7 @@
 
 document.addEventListener("DOMContentLoaded", () => {
   let filteredResources = [...RESOURCES];
-  let activeFilters = { tags: [], formats: [], types: [], grade: "" };
+  let activeFilters = { tags: [], siblings: [], types: [], grade: "" };
   let searchQuery = "";
 
   // ── DOM refs ─────────────────────────────────────────────
@@ -27,15 +27,15 @@ document.addEventListener("DOMContentLoaded", () => {
     filterTagsEl.appendChild(btn);
   });
 
-  // ── Format filter buttons ─────────────────────────────────
-  document.querySelectorAll(".format-btn").forEach(btn => {
+  // ── Sibling filter buttons ─────────────────────────────────
+  document.querySelectorAll(".sibling-btn").forEach(btn => {
     btn.addEventListener("click", () => {
-      const f = btn.dataset.format;
+      const sibling = btn.dataset.sibling;
       btn.classList.toggle("active");
-      if (activeFilters.formats.includes(f)) {
-        activeFilters.formats = activeFilters.formats.filter(x => x !== f);
+      if (activeFilters.siblings.includes(sibling)) {
+        activeFilters.siblings = activeFilters.siblings.filter(x => x !== sibling);
       } else {
-        activeFilters.formats.push(f);
+        activeFilters.siblings.push(sibling);
       }
       applyFilters();
     });
@@ -89,8 +89,8 @@ document.addEventListener("DOMContentLoaded", () => {
     searchInput.value = "";
     searchQuery = "";
     clearSearch.style.display = "none";
-    activeFilters = { tags: [], formats: [], types: [], grade: "" };
-    document.querySelectorAll(".tag-filter-btn.active, .format-btn.active, .type-btn.active, .grade-btn.active")
+    activeFilters = { tags: [], siblings: [], types: [], grade: "" };
+    document.querySelectorAll(".tag-filter-btn.active, .sibling-btn.active, .type-btn.active, .grade-btn.active")
       .forEach(btn => btn.classList.remove("active"));
     applyFilters();
   });
@@ -110,16 +110,16 @@ document.addEventListener("DOMContentLoaded", () => {
     filteredResources = RESOURCES.filter(r => {
       // Search
       if (searchQuery) {
-        const haystack = [r.name, r.description, r.nick_name, ...r.tags].join(" ").toLowerCase();
+        const haystack = [r.name, r.fun_facts, r.nick_name, ...r.tags].join(" ").toLowerCase();
         if (!haystack.includes(searchQuery)) return false;
       }
       // Tags
       if (activeFilters.tags.length > 0) {
         if (!activeFilters.tags.every(t => r.tags.includes(t))) return false;
       }
-      // Formats
-      if (activeFilters.formats.length > 0) {
-        if (!activeFilters.formats.includes(r.format)) return false;
+      // Siblings
+      if (activeFilters.siblings.length > 0) {
+        if (!activeFilters.siblings.includes(r.sibling)) return false;
       }
       // Types
       if (activeFilters.types.length > 0) {
@@ -159,7 +159,7 @@ document.addEventListener("DOMContentLoaded", () => {
     card.className = "resource-card";
     card.style.animationDelay = `${index * 50}ms`;
 
-    const formatIcon = FORMAT_ICONS[r.format] || "📚";
+    const siblingIcon = SIBLING_ICONS[r.sibling] || "📚";
     const typeIcon   = TYPE_ICONS[r.resource_type] || "🔗";
 
     const tagsHTML = r.tags.map(tag =>
@@ -168,11 +168,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     card.innerHTML = `
       <div class="card-header">
-        <span class="card-format-badge format-${r.format}">${formatIcon} ${FORMAT_LABELS[r.format]}</span>
+        <span class="card-sibling-badge sibling-${r.sibling}">${siblingIcon} ${SIBLING_LABELS[r.sibling]}</span>
         <span class="card-type-icon">${typeIcon}</span>
       </div>
       <h3 class="card-title">${r.name}</h3>
-      <p class="card-description">${r.description}</p>
+      <p class="card-description">${r.fun_facts}</p>
       <div class="card-tags">${tagsHTML}</div>
       <div class="card-footer">
         <div class="contributor">

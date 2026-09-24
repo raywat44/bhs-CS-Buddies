@@ -41,7 +41,7 @@ Here's what each field means:
 | `url` | The link to your resource, or the path to your uploaded file | `"https://youtube.com/..."` |
 | `contributor_name` | Your first name and last initial (or full name if you want!) | `"Maya C."` |
 | `tags` | A list of topics your resource covers | `["Python", "Loops"]` |
-| `format` | One of: `"mini-lecture"`, `"activity"`, `"inspiration"` | `"activity"` |
+| `sibling` | One of: `"only-child"`, `"youngest"`, `"middle"`, `"oldest"` | `"youngest"` |
 | `grade_level` | Either `"K-5"` or `"6-8"` | `"6-8"` |
 | `date_added` | Today's date in YYYY-MM-DD format | `"2025-03-01"` |
 
@@ -56,7 +56,7 @@ Here's what each field means:
   url: "https://www.youtube.com/watch?v=YOUR_VIDEO_ID",
   contributor_name: "Maya C.",
   tags: ["Binary", "How It Works", "Beginner"],
-  format: "mini-lecture",
+  sibling: "youngest",
   grade_level: "K-5",
   date_added: "2025-03-01"
 },
