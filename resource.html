@@ -120,25 +120,18 @@
             <div class="contributor-avatar-lg">${initials}</div>
             <div>
               <div style="font-weight:800; font-size:0.95rem;">${resource.nick_name}</div>
-              <div style="font-size:0.82rem; color:var(--ink-light); font-weight:600;" id = "major-college">Future ${resource.major} Major @ ${resource.college}</div>
-              <!--
-                <script>
-                
-                const div = document.getElementById("major-college");
-                if (${resource.grade_level} === "Teacher") {
-                  div.innerHTML = "${resource.major} Major @ ${resource.college}";
-                } else {
-                  div.innerHTML = "Future ${resource.major} Major @ ${resource.college}";
-                }
-                </script>
-              -->
+              <div style="font-size:0.82rem; color:var(--ink-light); font-weight:600;" id="major-college">${resource.grade_level === "Teacher" ? "" : "Future "}${resource.major} ${resource.grade_level === "Teacher" ? "from " : "Major @ "} ${resource.college}</div>
+              
             </div>
           </div>
 
           ${actionHTML}
         </div>
       </div>
-
+      
+                
+        
+      
       <!-- More from same sibling -->
       <div style="margin-top:3rem;">
         <h2 class="section-title">📚 More resources like this</h2>

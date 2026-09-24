@@ -36,8 +36,8 @@
       <span class="label">Resources</span>
     </div>
     <div class="hero-stat">
-      <span class="num">3</span>
-      <span class="label">Siblings</span>
+      <span class="num" id ="stat-tags">3</span>
+      <span class="label">Tags</span>
     </div>
     <div class="hero-stat">
       <span class="num">100%</span>
@@ -83,10 +83,10 @@
   <div class="filter-row">
     <span class="filter-label">Sibling</span>
     <div class="filter-chips">
-      <button class="filter-chip-btn sibling-btn" data-sibling="only-child">🎓 Only Child</button>
-      <button class="filter-chip-btn sibling-btn" data-sibling="youngest">🛠️ Youngest Child</button>
-      <button class="filter-chip-btn sibling-btn" data-sibling="middle">✨ Middle Child</button>
-      <button class="filter-chip-btn sibling-btn" data-sibling="oldest">👑 Oldest Child</button>
+      <button class="filter-chip-btn sibling-btn" data-sibling="only-child">👶 Only Child</button>
+      <button class="filter-chip-btn sibling-btn" data-sibling="youngest">👼 Youngest Child</button>
+      <button class="filter-chip-btn sibling-btn" data-sibling="middle">😶‍🌫️ Middle Child</button>
+      <button class="filter-chip-btn sibling-btn" data-sibling="oldest">🫠 Oldest Child</button>
     </div>
   </div>
 
@@ -103,7 +103,7 @@
 
   <!-- Tags -->
   <div class="filter-row">
-    <span class="filter-label">Topics</span>
+    <span class="filter-label">Tags</span>
     <div id="filter-tags"></div>
   </div>
 </div>
@@ -136,6 +136,7 @@
 <script src="js/app.js"></script>
 <script>
   document.getElementById("stat-resources").textContent = RESOURCES.length;
+  document.getElementById("stat-tags").textContent = Object.keys(TAG_COLORS).length;
 </script>
 </body>
 </html>

@@ -8,13 +8,13 @@ const RESOURCES = [
   {
     id: "001",
     name: "Mr. Watson",
-    fun_facts: "Quick sort — but instead of numbers, we're sorting people. This video makes a topic that sounds boring into something you'll actually remember.",
+    fun_facts: "Plays the Viola, owns 2 'Violins', enjoys Karaoke, bought a new car recently, does part-time for a UT program.",
     resource_type: "image",
     url: "https://file.forms.app/sitefile/38.jpeg",
     nick_name: "Big Watt",
     major: "Computer Science MS",
     college: "Georgia Tech",
-    tags: ["Algorithms", "Sorting", "Visual"],
+    tags: ["Python Wizard", "Java Junkie", "Stressed"],
     sibling: "oldest",
     grade_level: "Teacher",
     birth_date: "02-17"
@@ -22,13 +22,13 @@ const RESOURCES = [
   {
     id: "002",
     name: "Mr. Garcia",
-    fun_facts: "Quick sort — but instead of numbers, we're sorting people. This video makes a topic that sounds boring into something you'll actually remember.",
+    fun_facts: "Ran multiple marathons, has flown a plane, went to Europe over the summer.",
     resource_type: "video",
     url: "https://www.youtube.com/watch?v=BD8QLnsp5mo",
     nick_name: "Big G",
-    major: "Computer Science",
-    college: "UT Rio Grande Valley",
-    tags: ["Algorithms", "Sorting", "Visual"],
+    major: "C.S. BS and Ed. Tech MS",
+    college: "UT RGV",
+    tags: ["Python Wizard", "Java Junkie", "Stressed"],
     sibling: "oldest",
     grade_level: "Teacher",
     birth_date: "08-23"
@@ -43,11 +43,11 @@ const TAG_COLORS = {
   "C++ 4 U++":      "#96CEB4",
   "C# is Flat":     "#FFEAA7",
   "Stressed":       "#DDA0DD",
-  "Watson": "#98D8C8",
-  "Veenstra": "#F7DC6F",
-  "Garcia":    "#FF8C94",
-  "Staffel":     "#A8D8EA",
-  "Le":         "#FF6B6B",
+  "Had Watson": "#98D8C8",
+  "Had Veenstra": "#F7DC6F",
+  "Had Garcia":    "#FF8C94",
+  "Had Staffel":     "#A8D8EA",
+  "Had Le":         "#FF6B6B",
   "":      "#B8E0D2",
   "":    "#45B7D1",
   "":   "#FFD3B6",
@@ -65,10 +65,10 @@ function getTagColor(tag) {
 }
 
 const SIBLING_ICONS = {
-  "only-child": "🎓",
-  "youngest": "🛠️",
-  "middle": "✨",
-  "oldest": ""
+  "only-child": "👶",
+  "youngest": "👼",
+  "middle": "😶‍🌫️",
+  "oldest": "🫠"
 };
 
 const SIBLING_LABELS = {
