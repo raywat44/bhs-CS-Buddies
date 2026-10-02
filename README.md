@@ -32,34 +32,34 @@ Here's what each field means:
 | Field | What to put | Example |
 |-------|-------------|---------|
 | `id` | A unique 3-digit number (check what the last one is and add 1) | `"009"` |
-| `title` | A short, catchy title | `"Binary Numbers for Beginners"` |
-| `fun_facts` | 2–4 sentences about what the resource is and why it's cool | `"Learn what binary..."` |
+| `name` | Your name... | `"Mr. Watson"` |
+| `fun_facts` | 2–4 fn facts about yourself | `"Learn what binary..."` |
 | `resource_type` | One of: `"video"`, `"pdf"`, `"doc"`, `"link"` | `"video"` |
 | `url` | The link to your resource, or the path to your uploaded file | `"https://youtube.com/..."` |
 | `nick_name` | Your first name and last initial (or full name if you want!) | `"Maya C."` |
-| `major` | Your potential college | `"Computer Science"` |
-| `college` | Your potential major | `"Georgia Tech"` |
+| `major` | Your potential major | `"Computer Science"` |
+| `college` | Your potential college | `"Georgia Tech"` |
 | `tags` | A list of topics your resource covers | `["Python", "Loops"]` |
 | `sibling` | One of: `"only-child"`, `"youngest"`, `"middle"`, `"oldest"` | `"youngest"` |
-| `grade_level` | Either `"K-5"` or `"6-8"` | `"6-8"` |
-| `birth_date` | Today's date in YYYY-MM-DD format | `"2025-03-01"` |
+| `grade_level` | Junior or Senior | `"Senior"` |
+| `birth_date` | Today's date in MM-DD format | `"03-01"` |
 
 **A complete example:**
 
 ```js
 {
-  id: "009",
-  title: "Binary Numbers for Beginners",
-  fun_facts: "Did you know computers only understand 0s and 1s? In this video I break down how binary numbers work using a fun card trick. By the end you'll be able to read binary! No experience needed.",
+  id: "102",
+  name: "Mr. Garcia",
+  fun_facts: "Ran multiple marathons, has flown a plane, went to Europe over the summer.",
   resource_type: "video",
-  url: "https://www.youtube.com/watch?v=YOUR_VIDEO_ID",
-  nick_name: "The Wats",
-  major: "Computer Science",
-  college: "Georgia Tech",
-  tags: ["Binary", "How It Works", "Beginner"],
-  sibling: "youngest",
-  grade_level: "K-5",
-  date_added: "2025-03-01"
+  url: "https://www.youtube.com/watch?v=BD8QLnsp5mo",
+  nick_name: "Big G",
+  major: "Computer Science BS and Ed. Tech MS",
+  college: "UT RGV",
+  tags: ["Python Wizard", "Java Junkie", "Stressed"],
+  sibling: "oldest",
+  grade_level: "Teacher",
+  birth_date: "08-23"
 },
 ```
 
