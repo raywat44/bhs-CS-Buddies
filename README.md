@@ -33,7 +33,7 @@ Here's what each field means:
 |-------|-------------|---------|
 | `id` | A unique 3-digit number (check what the last one is and add 1) | `"009"` |
 | `name` | Your name... | `"Mr. Watson"` |
-| `fun_facts` | 2–4 fn facts about yourself | `"Learn what binary..."` |
+| `fun_facts` | 2–4 fun facts about yourself | `"Learn what binary..."` |
 | `resource_type` | One of: `"video"`, `"pdf"`, `"doc"`, `"link"` | `"video"` |
 | `url` | The link to your resource, or the path to your uploaded file | `"https://youtube.com/..."` |
 | `nick_name` | Your first name and last initial (or full name if you want!) | `"Maya C."` |
