@@ -1,5 +1,5 @@
 // ============================================================
-//  Byte Buddies — Resource Data
+//  BHS Byte Buddies — Resource Data
 //  To add a new resource, copy one object and fill it in!
 //  See README.md for full instructions.
 // ============================================================
