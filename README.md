@@ -39,7 +39,7 @@ Here's what each field means:
 | `nick_name` | Your first name and last initial (or full name if you want!) | `"Maya C."` |
 | `major` | Your potential major | `"Computer Science"` |
 | `college` | Your potential college | `"Georgia Tech"` |
-| `tags` | A list of topics your resource covers | `["Python", "Loops"]` |
+| `tags` | A list of tags that describe you or experience (you can add your own) | `["Python", "Loops"]` |
 | `sibling` | One of: `"only-child"`, `"youngest"`, `"middle"`, `"oldest"` | `"youngest"` |
 | `grade_level` | Junior or Senior | `"Senior"` |
 | `birth_date` | Today's date in MM-DD format | `"03-01"` |
