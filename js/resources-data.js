@@ -10,7 +10,7 @@ const RESOURCES = [
     name: "Mr. Watson",
     fun_facts: "Plays the Viola, owns 2 'Violins', enjoys Karaoke, bought a new car recently, does part-time for a UT program.",
     resource_type: "image",
-    url: "https://file.forms.app/sitefile/38.jpeg",
+    url: "resources/38.png",
     nick_name: "Big Watt",
     major: "Computer Science MS",
     college: "Georgia Tech",
