@@ -35,7 +35,7 @@ const RESOURCES = [
   },
   {
     id: "001",
-    name: "It's Garcia again",
+    name: "Gar Man",
     fun_facts: "",
     resource_type: "",
     url: "",
